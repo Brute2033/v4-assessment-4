@@ -29,7 +29,7 @@ class TrailList extends Component{
         })
     }
     addTrail = (trailName, difficulty, miles, time, hazards, notes) => {
-        axios.post('/api/trails', {trailName, difficulty, miles, time, hazards, notes})
+        axios.post(`/api/trails`, {trailName, difficulty, miles, time, hazards, notes})
         .then ((res) => {
             this.setState({trailArray: res.data})
         })
@@ -50,9 +50,13 @@ class TrailList extends Component{
         return(
             <div>
                 <AddTrail addTrail={this.addTrail} />
+                <h2> My DHM Trails </h2>
                 {this.state.trailArray.map((trail) => {
                     return(
-                        <Trail trail={trail} deleteTrail={this.deleteTrail} editTrail={this.editTrail} />
+                        <div>
+                            <h4> Personal Trail Stats </h4>
+                            <Trail trail={trail} deleteTrail={this.deleteTrail} editTrail={this.editTrail} />
+                        </div>
                     )
                 })}
             </div>

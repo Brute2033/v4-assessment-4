@@ -4,6 +4,7 @@ class AddTrail extends Component{
     constructor(){
         super()
         this.state = {
+            add: false,
             trailName: '',
             difficulty: '',
             miles: 0,
@@ -47,6 +48,9 @@ class AddTrail extends Component{
             hazards: '',
             notes: ''
         })
+    }
+    toggleAdd = () => {
+        this.setState({add: !this.state.add})
     }
     render(){
         return(

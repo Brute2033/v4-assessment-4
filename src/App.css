@@ -1,8 +1,53 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
+.header{
+  background-color: aquamarine;
+  height: 50px;
+  margin: auto;
+  padding: 25px;
+}
+.add{
+  background-color: chartreuse;
+  box-shadow: black 3px 3px 2px 0px;
+}
+.begone{
+  background-color: crimson;
+  box-shadow: black 3px 3px 2px 0px;
+  /* margin-right: 50%; */
+}
+.all-of-it{
+  background-color: darkcyan;
+  box-shadow: black 3px 3px 2px 0px;
+}
+.plastic-surgery{
+  background-color: goldenrod;
+  box-shadow: black 3px 3px 2px 0px;
+}
+.stats{
+  border: black solid 2px;
+  width: 50%;
+  /* height: 100vh; */
+  margin-left: 50%;
+  background-color: lightgray;
+  box-shadow: black 3px 3px 2px 0px;
+}
+.namie{
+  /* border: black solid 2px; */
+  margin-right: 50%;
+}
+.move-it{
+  margin-right: 50%;
+}
+.add-trail{
+  background-color: chartreuse;
+  box-shadow: black 3px 3px 2px 0px;
+}
+/* .notes{
+  display: flex;
+  flex-wrap: wrap;
+} */
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +80,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

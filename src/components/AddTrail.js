@@ -40,6 +40,7 @@ class AddTrail extends Component{
             this.state.hazards,
             this.state.notes
         )
+        this.toggleAdd()
         this.setState({
             trailName: '',
             difficulty: '',
@@ -53,7 +54,7 @@ class AddTrail extends Component{
         this.setState({add: !this.state.add})
     }
     render(){
-        return(
+        return this.state.add ? (
             <div>
               <h2> Add Trail </h2>
               <input value={this.state.trailName} onChange={(e) => this.handleTrailName(e.target.value)} placeholder='Enter Trail Name' />
@@ -62,7 +63,12 @@ class AddTrail extends Component{
               <input value={this.state.time} onChange={(e) => this.handleTime(e.target.value)} placeholder='Enter Time In Minutes' />
               <input value={this.state.hazards} onChange={(e) => this.handleHazards(e.target.value)} placeholder='Enter Hazards' />
               <input value={this.state.notes} onChange={(e) => this.handleNotes(e.target.value)} placeholder='Enter Notes' />
-              <button onClick={this.handleAdd}> Add Trail </button>
+              <button onClick={this.handleAdd} className='add-trail'> Add Trail </button>
+            </div>
+        ) : (
+            <div className='move-it'>
+                <h2> My Trails </h2>
+                <button onClick={this.toggleAdd} className='add'> + </button>
             </div>
         )
     }

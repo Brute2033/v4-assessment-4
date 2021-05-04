@@ -49,13 +49,13 @@ class TrailList extends Component{
     render(){
         return(
             <div>
+                <h2 className='header'> My DHM Trails </h2>
                 <AddTrail addTrail={this.addTrail} />
-                <h2> My DHM Trails </h2>
                 {this.state.trailArray.map((trail) => {
                     return(
                         <div>
-                            <h4> Personal Trail Stats </h4>
-                            <Trail trail={trail} deleteTrail={this.deleteTrail} editTrail={this.editTrail} />
+                            {/* <h4> Personal Trail Stats </h4> */}
+                                <Trail trail={trail} deleteTrail={this.deleteTrail} editTrail={this.editTrail} />
                         </div>
                     )
                 })}
